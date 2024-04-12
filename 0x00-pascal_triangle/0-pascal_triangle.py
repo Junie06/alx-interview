@@ -3,7 +3,8 @@
 
 
 def pascal_triangle(n):
-''' pascal traingle function'''
+	''' pascal traingle function'''
+
 	triangle = []
 	for i in range(n):
 		row = []
