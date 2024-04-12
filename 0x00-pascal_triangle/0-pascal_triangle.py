@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 ''' returns a list of lists of integers representing the Pascal triangle of n'''
 
+
 def pascal_triangle(n):
+''' pascal traingle function'''
+
         triangle = []
         for i in range(n):
             row = []
