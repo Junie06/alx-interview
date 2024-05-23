@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const request = require('request');
-const movieUrl = `https://swapi-api.alx-tools.com/api/films/${process.argv[2]}`;
+const swapUrl = `https://swapi-api.alx-tools.com/api/films/${process.argv[2]}`;
 
 function fetchCharacterData (characterUrl) {
   return new Promise((resolve, reject) => {
@@ -14,8 +14,8 @@ function fetchCharacterData (characterUrl) {
   });
 }
 
-function fetchAndPrintCharacterNames (movieUrl) {
-  request(movieUrl, (error, response, body) => {
+function fetchAndPrintCharacterNames (swapUrl) {
+  request(swapUrl, (error, response, body) => {
     if (!error && response.statusCode === 200) {
       const movieData = JSON.parse(body);
       const characterUrls = movieData.characters;
@@ -30,4 +30,4 @@ function fetchAndPrintCharacterNames (movieUrl) {
   });
 }
 
-fetchAndPrintCharacterNames(movieUrl);
+fetchAndPrintCharacterNames(swapUrl);
